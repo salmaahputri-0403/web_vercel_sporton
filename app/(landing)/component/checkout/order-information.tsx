@@ -39,7 +39,7 @@ const handleInputChange =(e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaEle
                         placeholder="+62xxxx" 
                         id="customerContact" 
                         name="customerContact"  
-                        value={formData.customerContact} 
+                        value={formData.customerContact ?? ""} 
                         onChange={handleInputChange} 
                     />
                 </div>
