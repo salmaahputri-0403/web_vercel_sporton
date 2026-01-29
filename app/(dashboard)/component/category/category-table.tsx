@@ -2,7 +2,7 @@ import PriceFormater from "@/app/utils/price-formater";
 import Image from "next/image";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 
-const productData =[
+const categoryData =[
     {
         name:"Running",
         imageUrl :"/image/category/category-running.png",
@@ -30,7 +30,7 @@ const CategoryTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {productData.map((data, index) => (
+                    {categoryData.map((data, index) => (
                         <tr key={index} className="boder-b border-gray-200 last:border-b-0">
                             <td className="px-6 py-4 font-medium">
                                 <div className="flex gap-2 items-center">

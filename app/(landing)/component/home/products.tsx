@@ -80,7 +80,7 @@ const handleAddtoCart = (e:React.MouseEvent, product:Product)=>{
                         </div>
                         <h3 className="font-medium text-lg mb-1.5 mt-5">{product.name}</h3>
                         <div className="flex justify-between mb-8">
-                            <div className="text-gray-500">{product.category.name}</div>
+                            <div className="text-gray-500">{product.category?.name}</div>
                             <div className="font-medium text-primary">
                                 {PriceFormater(product.price)}
                             </div>

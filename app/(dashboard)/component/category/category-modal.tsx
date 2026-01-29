@@ -3,14 +3,14 @@ import Modal from "../ui/modal";
 import ImageUploadReview from "../ui/image-uplod-review";
 import { useState } from "react";
 
-type TProductModalProps = {
+type TCategoryModalProps = {
     isOpen: boolean;
     onClose: () => void;
 };
 
 
 
-const CategoryModal = ({isOpen,onClose}:TProductModalProps) => {
+const CategoryModal = ({isOpen,onClose}:TCategoryModalProps) => {
     const [imageFile, setImageFile] = useState<File | null>(null);
     const [imagePreview, setimagePreview] = useState<string | undefined>(undefined);
     return(

@@ -1,8 +1,10 @@
+import { startPPRNavigation } from "next/dist/client/components/router-reducer/ppr-navigations";
+
 type TButtonProps = {
     children: React.ReactNode;
     className?: string;
     variant?: "primary" | "dark" |"ghost";
-    size?: "normal"|"sm" ;
+    size?: "normal"|"sm"|"standard";
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 const Button =({children, className, variant ="primary", size="normal", ...props}:TButtonProps)=>{
     const baseStyles ="inline-flex gap-2 duration-300 justify-center items-center cursor-pointer hover:scale-105";
@@ -15,7 +17,8 @@ const Button =({children, className, variant ="primary", size="normal", ...props
 
     const sizes={
         normal: 'py-4 px-9 ',
-        sm: 'py-[10p] px-7',
+        sm: 'py-[10px] px-7',
+        standard:'py-[10px] px-8'
     }
 
     
