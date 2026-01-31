@@ -13,8 +13,6 @@ type TransactionModalProps = {
 
 
 const TransactionModal = ({isOpen,onClose}:TransactionModalProps) => {
-    const [imageFile, setImageFile] = useState<File | null>(null);
-    const [imagePreview, setimagePreview] = useState<string | undefined>(undefined);
     return(
         <Modal isOpen={isOpen} onClose={onClose} title="Verify Transactions">
             <div className="flex  gap-6">

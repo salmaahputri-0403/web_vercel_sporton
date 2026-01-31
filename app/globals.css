@@ -43,6 +43,6 @@ html{
 .input-group-admin input,
 .input-group-admin select,
 .input-group-admin textarea{
-  @apply text-sm px-4 py-2.5 border border-gray-300 w-full rounded-md focus:border focus:border-gray-500 outline-none;
+  @apply text-sm px-4 py-3 border border-[#DBDBDB] w-full rounded-md focus:border focus:border-gray-500 outline-none;
 }
 

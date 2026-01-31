@@ -1,5 +1,4 @@
 import PriceFormater from "@/app/utils/price-formater";
-import Image from "next/image";
 import { FiEdit2, FiEye, FiTrash2 } from "react-icons/fi";
 
 const transactionData =[
@@ -10,15 +9,29 @@ const transactionData =[
         total: 450000,
         status:"pending",
     },
+    {
+        date:"23/02/2026 19:32",
+        customer :"John Doe",
+        contact:"08231223123",
+        total: 450000,
+        status:"rejected",
+    },
+    {
+        date:"23/02/2026 19:32",
+        customer :"John Doe",
+        contact:"08231223123",
+        total: 450000,
+        status:"paid",
+    },
     
 ];
-type TCategoryProps = {
+type TtransactionProps = {
     onViewDetails: () => void;
 };
 
 
 
-const TransactionTable = ({onViewDetails}:TCategoryProps) => {
+const TransactionTable = ({onViewDetails}:TtransactionProps) => {
     const getStatusColor =(status:string)=>{
         switch(status.toLowerCase()){
             case "pending":
