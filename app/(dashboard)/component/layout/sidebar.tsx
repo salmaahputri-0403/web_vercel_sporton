@@ -1,11 +1,15 @@
 "use client";
 
+import { logout } from "@/app/services/auth.service";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname,useRouter } from "next/navigation";
 import { FiBox, FiCreditCard, FiLayers, FiLogOut, FiShoppingCart } from "react-icons/fi";
 const Sidebar =() => {
     const pathname = usePathname();
+    const {push} = useRouter();
+
+    
     const menuItems =[
         {
             name:"Products",
@@ -27,7 +31,12 @@ const Sidebar =() => {
             icon: FiCreditCard,
             link:"/admin/bank-info",
         }
-    ]
+    ];
+
+    const handleLOgout = () => {
+        logout();
+        push("/admin/login");
+    }
 
 
     return(
@@ -56,12 +65,12 @@ const Sidebar =() => {
                 );
             })}
         </div>
-        <Link 
-            href="#" 
-            className="flex gap-3 font-medium py-3 px-4.5 mx-5 hover:bg-gray-100 duration-300 rounded-lg mt-auto mb-10">
+        <button 
+            onClick={handleLOgout}
+            className="cursor-pointer flex gap-3 font-medium py-3 px-4.5 mx-5 hover:bg-gray-100 duration-300 rounded-lg mt-auto mb-10">
                 <FiLogOut size={24} />
             Logout
-        </Link>
+        </button>
     </aside>
 )
     
