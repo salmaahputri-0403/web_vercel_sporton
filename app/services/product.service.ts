@@ -12,7 +12,7 @@ export const getProductDetail = async (id:string):Promise<Product> =>{
 };
 
 export const createProduct = async (data: FormData): Promise<Product> => {
-    return await fetchAPI<Product>("/products", {
+    return await fetchAPI<Product>(`/products`, {
         method: "POST",
         headers: {
         ...getAuthHeaders(),

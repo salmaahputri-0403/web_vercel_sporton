@@ -45,10 +45,10 @@ export interface Transaction{
     paymentProof: string;
     status: "pending"|"paid"|"rejected",
     purchasedItems: {
-        productId:string;
+        productId:Product;
         qty:number;
 
-    },
+    }[],
     totalPayment:string;
     customerName:string;
     customerContact:number|null;

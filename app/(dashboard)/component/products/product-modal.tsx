@@ -157,10 +157,10 @@ const ProductModal = ({isOpen,onClose,products,onSuccess}:TProductModalProps) =>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             <div className="input-group-admin">
-                                <label htmlFor="Price">Price (IDR)</label>
+                                <label htmlFor="price">Price (IDR)</label>
                                 <input 
                                     type="number" 
-                                    id="Price" 
+                                    id="price" 
                                     name="price"
                                     value={formData.price}
                                     onChange={handleChange}
@@ -168,11 +168,11 @@ const ProductModal = ({isOpen,onClose,products,onSuccess}:TProductModalProps) =>
                                 />
                             </div>
                             <div className="input-group-admin">
-                                <label htmlFor="Stock">Stock</label>
+                                <label htmlFor="stock">Stock</label>
                                 <input 
                                     type="number" 
-                                    id="Stock" 
-                                    name="Stock"
+                                    id="stock" 
+                                    name="stock"
                                     value={formData.stock}
                                     onChange={handleChange}
                                     placeholder="0" 
@@ -181,7 +181,7 @@ const ProductModal = ({isOpen,onClose,products,onSuccess}:TProductModalProps) =>
                         </div>
                         <div className="input-group-admin">
                             <label htmlFor="Category">Category</label>
-                            <select name="category" id="Category"
+                            <select name="categoryId" id="categoryId"
                                 value={formData.categoryId}
                                 onChange={handleChange}>
                                 <option value="" disabled>Select Category</option>
